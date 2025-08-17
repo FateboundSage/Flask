@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER PAGE</title>
+</head>
+<body>
+    <h1> Register here </h1>
+
+    {% if message %}
+        <p style="color: rgb(183, 85, 85);">{{message}}</p>
+    {%endif%}
+
+    <form action="/perform_registration" method="POST">
+        
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already a member? <a href="/">Login Here</a></p>
+</body>
+</html>
