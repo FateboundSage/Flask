@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to my Flask mini-project! This repository is designed as a hands-on learning experience for exploring Flask web development. As a BTech second year student, I've created this project to understand the fundamentals of web development using Python's Flask framework. This project includes user authentication, database operations, and basic web application structure.
+Welcome to my Flask mini-project! This repository is designed as a hands-on learning experience for exploring Flask web development. I've created this project to understand the fundamentals of web development using Python's Flask framework. This project includes user authentication, database operations, and basic web application structure.
 
 ## Features
 
