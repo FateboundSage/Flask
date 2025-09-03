@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request
-from db import Database
+from project_1.db import Database
+import project_1.api as api
 app = Flask(__name__)
 
 dbo = Database()
@@ -35,6 +36,19 @@ def perform_login():
     else:
         return render_template('login.html',message="PLEASE FILL CORRECT DETAILS")
 
+@app.route('/profie')
+def profile():
+    return render_template("profile.html")
+
+@app.route('/ner')
+def ner():
+    return render_template('ner.html')
+
+@app.route('/perform_ner' , methods=['POST'])
+def perform_ner():
+    text = request.form.get("ner_text")
+    responce = api.ner(text)
+    return render_template ("ner.html",responce = responce)
 
 
 app.run(debug=True)
